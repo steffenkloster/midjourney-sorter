@@ -194,7 +194,7 @@ client.on(Events.MessageCreate, (message) => {
     .find((guild) => guild.id == process.env.GUILD_ID)
     .channels.cache.find((c) => c.id == message.channelId);
 
-  if (message.author.id !== midjourneyBotUserId) {
+  if (message.author.id !== process.env.MIDJOURNEY_BOT_ID) {
     return;
   }
 

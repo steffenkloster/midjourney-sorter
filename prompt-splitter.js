@@ -1,5 +1,5 @@
 let prompt =
-  "Portrait of normal looking {white, brown, asian, black} {male, female} {Doctor, Teacher, Businessperson, Construction Worker, Engineer} smiling, crossed arms, smiling, isolated on white";
+  "Black {male, female} {photographer, model, chef, doctor, musician, teacher, engineer, artist, designer, architect, firefighter, lawyer, athlete, scientist, nurse, writer, farmer, electrician, journalist, pilot} standing up, body view, smiling, taken with nikon d750, texture-rich, isolated on white";
 let regex = /{([^}]+)}/g;
 let matches = [...prompt.matchAll(regex)]; // convert to array
 let listCount = 1;

@@ -144,6 +144,18 @@ module.exports = {
     ),
   async execute(interaction) {
     const channel = interaction.channel;
+    const parentId = channel.parentId;
+    const parentChannel = channel.guild.channels.cache.find(
+      (c) => c.id == parentId
+    );
+
+    if (parentChannel.name !== "Upscales") {
+      interaction.reply(
+        "Can't start download, outside of the upscales channel."
+      );
+      return;
+    }
+
     const messages = await channel.messages.fetch({
       limit: 100,
       before: interaction.options.getString("before"),
